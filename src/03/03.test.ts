@@ -33,7 +33,7 @@ beforeEach(()=>{
     }
 })
 
-test('new tech skill should be added to student', () => {
+test.skip('new tech skill should be added to student', () => {
 
     expect(student.technologies.length).toBe(3);
 
@@ -45,7 +45,7 @@ test('new tech skill should be added to student', () => {
 
 })
 
-test('isStudent should be made active', () => {
+test.skip('isStudent should be made active', () => {
 
     expect(student.isActive).toBe(false);
 
@@ -56,7 +56,7 @@ test('isStudent should be made active', () => {
 
 })
 
-test('does student live in city?', () => {
+test.skip('does student live in city?', () => {
 
     expect(student.isActive).toBe(false);
 

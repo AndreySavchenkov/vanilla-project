@@ -66,26 +66,26 @@ beforeEach(() => {
     }
 )
 
-test('Budget should be changed for HOSPITAL', () => {
+test.skip('Budget should be changed for HOSPITAL', () => {
     addMoneyToBudget(city.govermentBuildings[0], 100000);
 
     expect(city.govermentBuildings[0].budget).toBe(300000)
 })
 
-test('Budget should be changed for FIRE-STATION', () => {
+test.skip('Budget should be changed for FIRE-STATION', () => {
     addMoneyToBudget(city.govermentBuildings[1], -100000);
 
     expect(city.govermentBuildings[1].budget).toBe(400000)
 })
 
-test('Houses should be repared', () => {
+test.skip('Houses should be repared', () => {
     repairHouses(city.houses[1])
 
     expect(city.houses[1].repaired).toBeTruthy();
 
 })
 
-test('staff should be increased', () => {
+test.skip('staff should be increased', () => {
     toFireStaff(city.govermentBuildings[0], 20);
 
     expect(city.govermentBuildings[0].staffCount).toBe(180);
