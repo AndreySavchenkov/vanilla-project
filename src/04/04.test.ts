@@ -7,7 +7,7 @@ test('should take old men older then 90', () => {
     expect(oldAges[0]).toBe(100);
 })
 
-test('should take courses cheaper 160', () => {
+test('should take courses chipper 160', () => {
     const courses = [
         {title: 'css', price: 110},
         {title: 'js', price: 200},
@@ -15,9 +15,9 @@ test('should take courses cheaper 160', () => {
     ]
 
 
-    const chipCourses = courses.filter(course => course.price  < 160);
+    const chipCourses = courses.filter(course => course.price < 160);
 
     expect (chipCourses.length).toBe(2);
-    expect(chipCourses.title[0]).toBe('css');
-    expect(chipCourses.title[1]).toBe('react');
+    expect(chipCourses[0].title).toBe('css');
+    expect(chipCourses[1].title).toBe('react');
 })
