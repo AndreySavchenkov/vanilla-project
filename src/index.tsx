@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {value01_01} from './01-tests/01';
 import {splitIntoWords} from './01-tests/01'
+import {User} from "./06/06-callback";
 
 
 
@@ -14,7 +15,7 @@ import {splitIntoWords} from './01-tests/01'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <User/>
   </React.StrictMode>,
   document.getElementById('root')
 );
