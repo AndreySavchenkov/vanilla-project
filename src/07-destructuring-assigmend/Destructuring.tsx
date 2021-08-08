@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 
 type LessonType = {
@@ -25,9 +25,12 @@ type PropsType = {
 
 export const ManComponent:React.FC<PropsType> = ({title, man,...props}) => {
 
+    function useDimychState(m: string) {
+        return[m, function(){}]
+    }
 
 
-
+    const [message, setMessage] = useState<string>('hello')
 
     return <div>
         <h1>{title}</h1>
