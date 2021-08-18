@@ -68,3 +68,30 @@ test('array reference test', () => {
 
     expect(user2.address.title).toBe('Grodno')
 })
+
+test('array reference test', () => {
+    const user = {
+        name: 'Andrew',
+        age: 31,
+        address: {
+            title: 'Grodno'
+        }
+    }
+
+    const addr = user.address
+
+    const user2 = {
+        name: 'Petya',
+        age: 30,
+        address: addr
+    }
+
+    const users = [user,user2,{name: 'Vasya', age: 36, address: addr}]
+
+    const admins =[user, user2]
+
+    admins[0].name='Andryxa'
+
+
+    expect(user.name).toBe('Andryxa')
+})
