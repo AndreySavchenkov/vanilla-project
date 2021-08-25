@@ -1,7 +1,7 @@
 import {
     addNewBooksToUser,
     makeHairstyle,
-    moveUser, moveUserToOtherHouse,
+    moveUser, moveUserToOtherHouse, updateBook,
     upgradeUserLaptop,
     UserType,
     UserWithBooksType,
@@ -157,20 +157,12 @@ test('update js to ts', () => {
         books: ['css','html','js','react']
     }
 
-    const copyUser = addNewBooksToUser(user,['ts', 'rest api'])
+    const copyUser = updateBook(user,'js', 'ts')
 
 
     expect(user).not.toBe(copyUser)
     expect(user.address).toBe(copyUser.address)
     expect(copyUser.laptop).toBe(user.laptop)
     expect(copyUser.books).not.toBe(user.books)
-    expect(copyUser.books[4]).toBe('ts')
-    expect(copyUser.books[5]).toBe('rest api')
-    expect(copyUser.books).toStrictEqual(['css','html','js','react','ts','rest api'])
-    expect(user.books).toStrictEqual(['css','html','js','react'])
-
-
-
-
-
+    expect(copyUser.books[2]).toBe('ts')
 })

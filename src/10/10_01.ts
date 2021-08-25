@@ -14,7 +14,6 @@ export type UserWithBooksType = UserType & {
 }
 
 
-
 export const makeHairstyle = (u: UserType, power: number) => {
     const copy = {
         ...u,
@@ -58,9 +57,18 @@ export const upgradeUserLaptop = (user: UserWithLaptopType, laptop: string) => {
 
 export const addNewBooksToUser = (user: UserWithLaptopType & UserWithBooksType, books: Array<string>) => {
     return {
-       ...user,
+        ...user,
         books: [...user.books.concat(books)]
 
+    }
+}
+
+export const updateBook = (user: UserWithLaptopType & UserWithBooksType,
+                           oldBook: string,
+                           newBook: string) => {
+    return {
+        ...user,
+        books: user.books.map(el => el === oldBook ? newBook : el)
     }
 }
 
